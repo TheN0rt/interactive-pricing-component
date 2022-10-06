@@ -4,8 +4,10 @@ const inputRange = document.querySelector('#price__range');
 const isChecked = () => {
    if(checkBox.checked) {
       document.querySelector('#price__value').textContent = '$' + Number.parseFloat(inputRange.value * 0.25 * 12).toFixed(2)
+      document.querySelector('.price__cost span').textContent = '/year'
    } else {
       document.querySelector('#price__value').textContent = '$' + Number.parseFloat(inputRange.value).toFixed(2)
+      document.querySelector('.price__cost span').textContent = '/month'
    }
 }
 
